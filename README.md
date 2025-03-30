@@ -1,4 +1,6 @@
-...This is a work in progress...Will remove this line when finished with instructions. 
+...This is a work in progress...Will remove this line when finished with instructions.
+Want to leave a suggestion or even contribute? Yes, Please. Any help will be greatly appreciated.
+Besides I need all the help I can get.lol. Thank You!
 
 Welcome.
 You probably are saying why do it this way? I can use a ready made theme or even use AI to make a theme.
