@@ -1,4 +1,3 @@
-...This is a work in progress...Will remove this line when finished with instructions.
 Want to leave a suggestion or even contribute? Yes, Please. Any help will be greatly appreciated.
 Besides I need all the help I can get.lol. Thank You!
 
@@ -107,6 +106,19 @@ hugo server (this will load the site where you can see your post like before at 
 
 Did your new post show? yahoo..
 Now close the server back at powershell by pressing Ctrl+c.
+
+...Now lets make it your own...
+
+Using file explorer go to your site.
+Open the themes folder and then open lunar-eclipse folder. Now open static and then css folders.
+In the css folder there is a file called styles.css. Open that file with VS code. 
+This is where you can make changes to your site as you wish. You can change colors for everything here.
+VS code makes it easy. Make the changes you want save file then check out your changes with hugo server.
+
+At this point I am going to end this. But you can use AI to add many features. Just make sure to let AI know
+you are using hugo.
+
+HAPPY CODING!!
 
 
 
