@@ -1,6 +1,3 @@
-Want to leave a suggestion or even help with this project? Yes, Please. Any help will be greatly appreciated.
-Besides I need all the help I can get.lol. Thank You!
-
 Welcome.
 You probably are saying why do it this way? I can use a ready made theme or even use AI to make a theme.
 This is true, but if you use a ready made theme, it want be yours and you will probably have to sacrifice something you want in your theme.
