@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Deep dark gray */
+    color: #ffffff; /* White text */
+}
+
+a {
+    color: #bb86fc; /* Soft purple for links */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffbb86; /* Hover color for links */
+}
+
+header {
+    background-color: #1f1f1f; /* Slightly lighter than body */
+    padding: 15px;
+    text-align: center;
+}
+
+footer {
+    background-color: #1f1f1f;
+    padding: 10px;
+    text-align: center;
+}

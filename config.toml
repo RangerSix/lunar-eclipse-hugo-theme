@@ -1,0 +1,5 @@
+baseURL = "https://example.com/"
+languageCode = "en-us"
+title = "Lunar Eclipse"
+theme = "lunar-eclipse"
+paginate = 10
