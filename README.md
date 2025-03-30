@@ -5,117 +5,188 @@ Using AI, I find is never right. Spent more time with errors than blogging.
 This way you get to build the house the way you want it, I'm just giving you the foundation.
 And perhaps we both can learn something. lol..
 
-Build Environment:
 
-I use Windows 11. So that is what these instructions are for.
+---
 
-1. Windows PowerShell.
-2. Windows Visual Studio Code or VS Code (you can get from windows store).
-3. Git for windows. I would use this link because you get a more robust version.
-              https://gitforwindows.org
-4. Go, program language. get it from here  
-              https://go.dev/doc/install
-5. Hugo, go here https://github.com/gohugoio/hugo/releases/tag/v0.145.0 and you want to download
-   hugo_extended_0.145.0_windows-amd64.zip. This is the lates version as of writing this.
-   To keep this short as possible not going to give instructions on how to install. 
+# Hugo Blog Website Guide for Windows 11
 
-Ok, now we should have everything we need to build and customize a hugo blog/website.
-Lets make sure.
+This guide shows you how to build a customized Hugo blog/website from the ground up. Rather than using a pre-made theme, you’ll learn how to set up your project and integrate your own design touches—a process that not only creates a unique site but also helps you learn more.
 
-open powershell and type
+> _Remember: The process may be challenging at times, but it’s an excellent opportunity to understand the inner workings of your website._
 
-  git version
-(this should give a git version number with on errors)
+---
 
-  go version
+## 1. Prerequisites
 
-  hugo version
+Before getting started, make sure your Windows 11 system has the following tools installed:
 
-No errors? 
-Lets begin!
+- **Windows PowerShell**
+- **Visual Studio Code (VS Code)** – readily available via the [Windows Store](https://www.microsoft.com/store/apps) or from the official website.
+- **Git for Windows** – available at [gitforwindows.org](https://gitforwindows.org) for a robust version.
+- **Go Programming Language** – download and install from [go.dev](https://go.dev/doc/install).
+- **Hugo** – download the extended version from the [Hugo GitHub releases page](https://github.com/gohugoio/hugo/releases/tag/v0.145.0). Look for:
+  - `hugo_extended_0.145.0_windows-amd64.zip`
 
-1. Create a new hugo site. Still in powershell cd to a folder where you want your site to be. I would suggest NOT putting it in a onedrive folder.
-You could create a new folder in your dir, something like myhugosite. cd to you new dir, it should be empty.
-Now create your new site with the command
+*Note: Detailed installation instructions aren’t provided here; ensure each tool is installed and added to your system’s PATH.*
 
-   hugo new site yoursitename  (replace yoursitename with what you want call your site)
-   
-then hit enter and you should now have a new folder with your site name.
-cd to that folder. There should be a few folders there but we will only be using the theme folder and the hugo.toml file (for now anyway).
+---
 
-  ..Installing the theme..
+## 2. Verifying Your Environment
 
-There are two ways to do this. 
+Open PowerShell and check that each tool is working properly by running:
 
-1. Simply download the zip from the green code button. Should save in downloads folder or wherever you save downloaded file.
-   Extract the zip. You should now have a folder called, lunar-eclipse-hugo-theme-main. Open that folder and you should have another folder with the same name, rename that folder to lunar-eclipse.
-   Once renamed make sure inside the lunar-elcipse folder you have the theme.toml, config.toml,README.md and two folders, static and layouts.
-Now you can copy or move lunar-eclipse folder to the themes folder in your hugo site that you built.
+```powershell
+git version
+go version
+hugo version
+```
 
-2. Download the theme as a Submodule. To do it this way, in powershell make sure you are in the root of your hugo site. Then use this command to install the theme.
-       
-git submodule add https://github.com/RangerSix/lunar-eclipse-hugo-theme.git themes/lunar-eclipse
+Each command should return version details with no errors. If they do, you're ready to build your site.
 
-Now your theme is installed.
+---
 
-  ..Lets do a quick test..
+## 3. Creating Your New Hugo Site
 
-Again in the root of your hugo site in powershell run this command
+1. **Choose Your Location**  
+   Open PowerShell and navigate (`cd`) to the folder where you want your website. (Tip: Avoid creating your site inside a OneDrive folder to prevent syncing issues.)
 
-hugo server -t lunar-eclipse
+2. **Create a Directory for Your Site**  
+   For example, create a folder named `myhugosite` and navigate into it:
+   ```powershell
+   mkdir myhugosite
+   cd myhugosite
+   ```
 
-FYI. The -t tells hugo to use the theme
+3. **Generate the Site**  
+   Run the following command—replace `yoursitename` with your desired site name:
+   ```powershell
+   hugo new site yoursitename
+   ```
+   This creates a new folder named after your site. Navigate into the folder:
+   ```powershell
+   cd yoursitename
+   ```
 
-No errors?! yahoo!
+---
 
-This will build your site with basic lunar-eclipse theme. It should have the site local so you can view it.
-Open your browser and type localHost:1313 in the address field it should open your new site with the basic lunar-eclipse theme.
-Make sure to Ctrl+c to stop the local server when your done.
+## 4. Installing the Theme
 
-...Now lets add a post...
+You have two options to install your theme, **lunar-eclipse** in this example:
 
-Back in powershell at the root of your site type
+### Option 1: Manual Installation
 
-hugo new posts/postname.md  (replacing postname with the name you want for your post).
+1. **Download the Theme**  
+   Click the green “Code” button on the theme’s GitHub repository and download the ZIP file.
 
-hit enter it should create a file in content\posts\postname.md.
-Using file explorer open that file with VS code. You should see the front matter at the top.
-Here you will need to change draft = true to draft = false. Otherwise hugo will not add it to the site.
-Also change the title to what ever you want to call your post.
-Now tab down and write your post. When done save the file and return to the root of your site folder.
+2. **Extract and Rename**  
+   - Extract the ZIP file.
+   - Locate the folder (e.g., `lunar-eclipse-hugo-theme-main`), then rename the inner folder to `lunar-eclipse`.
+   - Confirm the folder now contains the necessary files: `theme.toml`, `config.toml`, `README.md` and directories `static` and `layouts`.
 
-...Lets test to see if your post shows now...
+3. **Move the Theme into Your Site**  
+   Copy or move the folder `lunar-eclipse` into the `themes` directory of your Hugo site.
 
-In the root of your site folder there is a file called hugo.toml.
-We are going to edit this file so hugo will use the theme without telling it to every time.
-In file explorer right click and choose open with VS code. All you need to do is add
-theme = "lunar-eclipse"  make sure to space before and after =.
-While your here you change title = "to what you want to name your site".
-Save and close.
+### Option 2: Using Git Submodule
 
-Now back in powershell in the root of your site type 
+1. **Add the Submodule**  
+   In your site’s root directory, run:
+   ```powershell
+   git submodule add https://github.com/RangerSix/lunar-eclipse-hugo-theme.git themes/lunar-eclipse
+   ```
 
-hugo  (this will build site with your new post)
+Either method will install the theme into your site’s `themes` folder.
 
-then all we have to do is type
+---
 
-hugo server (this will load the site where you can see your post like before at localHost:1313)
+## 5. Testing the Basic Theme Setup
 
-Did your new post show? yahoo..
-Now close the server back at powershell by pressing Ctrl+c.
+1. **Run the Local Server**  
+   In the root of your Hugo site, execute:
+   ```powershell
+   hugo server -t lunar-eclipse
+   ```
+   The `-t` flag tells Hugo to use the `lunar-eclipse` theme.
 
-...Now lets make it your own...
+2. **View Your Site**  
+   Open your browser and type:
+   ```
+   localhost:1313
+   ```
+   You should see the site rendered with the basic lunar-eclipse theme.
 
-Using file explorer go to your site.
-Open the themes folder and then open lunar-eclipse folder. Now open static and then css folders.
-In the css folder there is a file called styles.css. Open that file with VS code. 
-This is where you can make changes to your site as you wish. You can change colors for everything here.
-VS code makes it easy. Make the changes you want save file then check out your changes with hugo server.
+3. **Stop the Server**  
+   Press `Ctrl + C` in PowerShell when you’re finished viewing.
 
-At this point I am going to end this. But you can use AI to add many features. Just make sure to let AI know
-you are using hugo.
+---
 
-HAPPY CODING!!
+## 6. Creating and Publishing a Post
+
+1. **Create a New Post**  
+   In PowerShell (ensure you’re in the root of your site), type:
+   ```powershell
+   hugo new posts/postname.md
+   ```
+   Replace `postname` with your chosen title. A file appears at `content/posts/postname.md`.
+
+2. **Edit the Post**  
+   Open the new file in VS Code. In the front matter at the top:
+   - Change:  
+     `draft: true` → `draft: false`
+   - Update the `title` field as desired.
+   - Write your post content below the front matter.
+   - Save the file.
+
+3. **Update Site Configuration**  
+   Open `hugo.toml` (located in your site’s root) in VS Code. Add or update the following entries:
+   ```toml
+   title = "Your Site Title"
+   theme = "lunar-eclipse"
+   ```
+   Save your changes.
+
+4. **Build the Site and Test Your Post**  
+   In PowerShell:
+   ```powershell
+   hugo            # Build the site, including the new post
+   hugo server     # Launch the local server
+   ```
+   Browse to `localhost:1313` to ensure your post appears. Stop the server with `Ctrl + C` when done.
+
+---
+
+## 7. Customizing Your Theme
+
+To truly make the theme your own:
+
+1. **Locate the Stylesheet**  
+   Navigate to:
+   ```
+   themes/lunar-eclipse/static/css/styles.css
+   ```
+2. **Edit the CSS**  
+   Open `styles.css` in VS Code and adjust colors, fonts, and layouts to fit your style.
+3. **Review Changes**  
+   Save your changes and run:
+   ```powershell
+   hugo server
+   ```
+   Refresh your browser to see your modifications in real time.
+
+---
+
+## Final Thoughts and Next Steps
+
+By following these steps, you've built the foundation for a fully customized Hugo website. The process not only results in a site uniquely tailored to your tastes but also deepens your understanding of web development practices.
+
+**Additional Enhancements to Explore:**
+
+- **Continuous Deployment:** Automate updates using tools like GitHub Actions for deploying to hosting platforms such as Netlify or Vercel.
+- **Feature Expansion:** Integrate features powered by AI or additional Hugo components, such as taxonomies, menus, and shortcodes.
+- **SEO and Performance:** Look into Hugo’s built-in SEO practices and performance tweaks to optimize your site.
+
+Happy Coding!
+
+--- 
 
 
 
