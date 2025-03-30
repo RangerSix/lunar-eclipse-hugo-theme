@@ -1,3 +1,5 @@
+...This is a work in progress...Will remove this line when finished with instructions. 
+
 Welcome.
 You probably are saying why do it this way? I can use a ready made theme or even use AI to make a theme.
 This is true, but if you use a ready made theme, it want be yours and you will probably have to sacrifice something you want in your theme.
