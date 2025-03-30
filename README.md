@@ -1,4 +1,4 @@
-Want to leave a suggestion or even contribute? Yes, Please. Any help will be greatly appreciated.
+Want to leave a suggestion or even help with this project? Yes, Please. Any help will be greatly appreciated.
 Besides I need all the help I can get.lol. Thank You!
 
 Welcome.
