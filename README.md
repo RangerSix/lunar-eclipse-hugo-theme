@@ -26,12 +26,12 @@ Lets make sure.
 
 open powershell and type
 
-git version
+  git version
 (this should give a git version number with on errors)
 
-go version
+  go version
 
-hugo version
+  hugo version
 
 No errors? 
 Lets begin!
