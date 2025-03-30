@@ -25,7 +25,7 @@ Lets make sure.
 open powershell and type
 
 git version
-this should give a git version number with on errors.
+(this should give a git version number with on errors)
 
 go version
 
@@ -36,7 +36,9 @@ Lets begin!
 
 1. Create a new hugo site. Still in powershell cd to a folder where you want your site to be. I would suggest NOT putting it in a onedrive folder.
 You could create a new folder in your dir, something like myhugosite. cd to you new dir, it should be empty.
-Now create your new site with the command, hugo new site yoursitename, then hit enter and you should now a new folder with your site name.
+Now create your new site with the command,
+   hugo new site yoursitename  (replace yoursitename with what you want call your site)
+then hit enter and you should now have a new folder with your site name.
 cd to that folder. there should be a few folders there but we will only be using the theme folder and the hugo.toml file.
 
  
