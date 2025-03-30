@@ -74,5 +74,40 @@ No errors?! yahoo!
 
 This will build your site with basic lunar-eclipse theme. It should have the site local so you can view it.
 Open your browser and type localHost:1313 in the address field it should open your new site with the basic lunar-eclipse theme.
+Make sure to Ctrl+c to stop the local server when your done.
+
+...Now lets add a post...
+
+Back in powershell at the root of your site type
+
+hugo new posts/postname.md  (replacing postname with the name you want for your post).
+
+hit enter it should create a file in content\posts\postname.md.
+Using file explorer open that file with VS code. You should see the front matter at the top.
+Here you will need to change draft = true to draft = false. Otherwise hugo will not add it to the site.
+Also change the title to what ever you want to call your post.
+Now tab down and write your post. When done save the file and return to the root of your site folder.
+
+...Lets test to see if your post shows now...
+
+In the root of your site folder there is a file called hugo.toml.
+We are going to edit this file so hugo will use the theme without telling it to every time.
+In file explorer right click and choose open with VS code. All you need to do is add
+theme = "lunar-eclipse"  make sure to space before and after =.
+While your here you change title = "to what you want to name your site".
+Save and close.
+
+Now back in powershell in the root of your site type 
+
+hugo  (this will build site with your new post)
+
+then all we have to do is type
+
+hugo server (this will load the site where you can see your post like before at localHost:1313)
+
+Did your new post show? yahoo..
+Now close the server back at powershell by pressing Ctrl+c.
+
+
 
  
